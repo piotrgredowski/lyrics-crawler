@@ -4,9 +4,9 @@ import random
 import logging
 from pathlib import Path
 
-from src.crawler import LyricsCrawler
-from src.parser import parse_input_file
-from src.sources import (
+from lyrics_crawler.crawler import LyricsCrawler
+from lyrics_crawler.parser import parse_input_file
+from lyrics_crawler.sources import (
     GeniusSource,
     AZLyricsSource,
     TekstowoSource,
@@ -93,6 +93,12 @@ def main():
             print(f"  Success: {results['success']}")
             print(f"  Failed:  {results['failed']}")
             print(f"  Skipped: {results['skipped']}")
+            
+            if results["failed_songs"]:
+                print("\nFailed songs:")
+                for song in results["failed_songs"]:
+                    print(f"  - {song}")
+            
             print(f"  Output:  {Path(args.output).absolute()}")
             print("=" * 50)
 

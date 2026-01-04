@@ -6,7 +6,9 @@ dist/
 wheels/
 *.egg-info
 
-output/
-
 # Virtual environments
 .venv
+
+# App files
+output/
+progress.json

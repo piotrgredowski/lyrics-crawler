@@ -160,7 +160,7 @@ class LyricsCrawler:
     async def run(self, songs: list[Song], resume: bool = False) -> dict:
         """Run scraping for all songs."""
         completed = self._load_progress() if resume else set()
-        results = {"success": 0, "failed": 0, "skipped": 0}
+        results = {"success": 0, "failed": 0, "skipped": 0, "failed_songs": []}
 
         for i, song in enumerate(songs, 1):
             key = self._get_song_key(song.artist, song.title)
@@ -181,6 +181,7 @@ class LyricsCrawler:
             else:
                 logger.warning(f"Not found on any source")
                 results["failed"] += 1
+                results["failed_songs"].append(f"{song.artist} - {song.title}")
 
             # Rate limiting between songs
             if i < len(songs):

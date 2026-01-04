@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Lyrics Crawler",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.main",
+      "args": ["songs.txt"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Run Lyrics Crawler (Resume)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.main",
+      "args": ["songs.txt", "--resume"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Run Lyrics Crawler (Visible Browser)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.main",
+      "args": ["songs.txt", "--no-headless"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    }
+  ]
+}

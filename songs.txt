@@ -1,0 +1,10 @@
+# Example input file
+# Format: Artist - Song Title
+# Lines starting with # are comments
+
+Radiohead - Creep
+Nirvana - Smells Like Teen Spirit
+The Beatles - Yesterday
+Queen - Bohemian Rhapsody
+Kaśka Sochacka - Niebo było róŻowe
+Mrozu - Miliony monet

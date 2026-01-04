@@ -9,12 +9,7 @@ from src.parser import parse_input_file
 from src.sources import (
     GeniusSource,
     AZLyricsSource,
-    LyricFindSource,
-    MusixmatchSource,
-    LyricsComSource,
-    SongLyricsSource,
-    LyricsModeSource,
-    LyricsOxygenSource,
+    TekstowoSource,
 )
 
 
@@ -75,12 +70,7 @@ def main():
     all_sources = [
         GeniusSource(delay=(args.delay, args.delay + 2)),
         AZLyricsSource(delay=(args.delay, args.delay + 2)),
-        LyricFindSource(delay=(args.delay, args.delay + 2)),
-        MusixmatchSource(delay=(args.delay, args.delay + 2)),
-        LyricsComSource(delay=(args.delay, args.delay + 2)),
-        SongLyricsSource(delay=(args.delay, args.delay + 2)),
-        LyricsModeSource(delay=(args.delay, args.delay + 2)),
-        LyricsOxygenSource(delay=(args.delay, args.delay + 2)),
+        TekstowoSource(delay=(args.delay, args.delay + 2)),
     ]
 
     # Shuffle sources to distribute load across different sites
